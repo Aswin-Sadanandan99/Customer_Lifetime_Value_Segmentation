@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 import gzip
 
-with gzip.open("clv_model.pkl.gz","rb") as f:
+with gzip.open("clvmodel.pkl.gz", "rb") as f:
     clv_model = pickle.load(f)
 churn_model = pickle.load(open("churn_model.pkl","rb"))
 kmeans_model = pickle.load(open("kmeans_model.pkl","rb"))
@@ -77,3 +77,4 @@ st.write(f"Customer Segment: {segment_label}")
 
 
 st.success(f"Recommended Strategy: {strategy}")
+
