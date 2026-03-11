@@ -1,9 +1,11 @@
 import streamlit as st
 import numpy as np
 import pickle
+import gzip
 
 # Load models
-clv_model = pickle.load(open("clv_model.pkl","rb"))
+with gzip.open("clv_model.pkl.gz","rb") as f:
+    clv_model = pickle.load(f)
 churn_model = pickle.load(open("churn_model.pkl","rb"))
 kmeans_model = pickle.load(open("kmeans_model.pkl","rb"))
 scaler = pickle.load(open("scaler.pkl","rb"))
