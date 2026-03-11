@@ -3,7 +3,6 @@ import numpy as np
 import pickle
 import gzip
 
-# Load models
 with gzip.open("clv_model.pkl.gz","rb") as f:
     clv_model = pickle.load(f)
 churn_model = pickle.load(open("churn_model.pkl","rb"))
@@ -75,5 +74,6 @@ st.write(f"Predicted CLV: {round(clv,2)}")
 st.write(f"Churn Probability: {round(churn_prob,2)}")
 
 st.write(f"Customer Segment: {segment_label}")
+
 
 st.success(f"Recommended Strategy: {strategy}")
