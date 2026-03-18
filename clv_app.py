@@ -20,7 +20,8 @@ st.markdown("""
 <style>
 
 [data-testid="stAppViewContainer"] {
-background: linear-gradient(135deg,#f5f7fa,#c3cfe2);
+background: linear-gradient(135deg, #1e293b, #334155);
+color: #ffffff;
 }
 
 [data-testid="stSidebar"] {
